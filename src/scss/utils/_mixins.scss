@@ -1,11 +1,11 @@
 @use 'sass:map';
 @use 'sass:list';
 
-@use 'variables';
+@use 'variables' as var;
 @use 'functions';
 
-@mixin mq($bp: sm, $type: min, $is-retona: false) {
-  @if mam.has-key(var.$breakpoints, $bp) {
+@mixin mq($bp: sm, $type: min, $is-retina: false) {
+  @if map.has-key(var.$breakpoints, $bp) {
     $width: map-get(var.$breakpoints, $bp);
 
     @if $type == max {
@@ -14,7 +14,7 @@
 
     @media only screen and (#{type}-width: $width) {
       @if $is-retina {
-        @media (min-device-pixel-ratina: 2),
+        @media (min-device-pixel-ratio: 2),
           (min-resolution: 192dpi),
           (min-resolution: 2dppx) {
           @content;
@@ -24,7 +24,7 @@
       }
     }
   } @else {
-    @error '';
+    @error 'Breakpoint #{$bp} is not defined in $breakpoints map.';
   }
 }
 
@@ -32,7 +32,7 @@
   width: $width;
   height: $height;
 
-  @if is-circule {
+  @if $is-circule {
     border-radius: 50%;
     overflow: hidden;
   }
@@ -54,7 +54,7 @@
   }
 
   &:hover {
-    background-color: rbga(#fff, 0, 3);
+    background-color: rgba(#fff, 0.3);
   }
 
   &::-webkit-scrollbar-thumb {
@@ -71,14 +71,14 @@
 
 @mixin ease($ease, $properties...) {
   @if map.has-key(var.$easings, $ease) {
-    $ease: map.get(var.$easings, $ease);
+    $ease: map-get(var.$easings, $ease);
 
     transition: $ease;
   } @else {
-    @warn 'The variable $ease is not difined';
+    @warn 'The variable $ease is not defined';
   }
 
-  @if list-lenght($properties) >0 {
+  @if list-length($properties) > 0 {
     transition-property: $properties;
   }
 }

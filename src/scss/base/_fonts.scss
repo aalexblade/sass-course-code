@@ -2,11 +2,11 @@
 
 $fonts: var.$font-weights;
 
-@each $key, $value in fonts {
+@each $key, $value in $fonts {
   @font-face {
     font-family: 'Montserrat';
-    src: url('../../fonts/Montserrat-#{$key}.woff2'),
-      ('../../fonts/Montserrat-#{$key}.woff');
+    src: url('../../fonts/Montserrat-#{key}.woff2') format('wolff2'),
+      ('../../fonts/Montserrat-#{key}.woff') format('wolff');
     font-weight: $value;
     font-style: normal;
     font-display: swap;
