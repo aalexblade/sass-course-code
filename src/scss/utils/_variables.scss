@@ -10,16 +10,16 @@ $colors: (
   'light': #fff,
   'light-primary': #fafafb,
   'light-secondary': #b5b5be,
-  'light-tertriaty': #92929d,
+  'light-tertiatry': #92929d,
 
   'dark': #000,
   'dark-primary': #13131a,
   'dark-secondary': #1c1c24,
-  'dark-tertriaty': #292932,
+  'dark-tertiatry': #292932,
 
   'accent-primary': #f07f2e,
   'accent-secondary': #d14a00,
-  'accent-tertriaty': #d14a00,
+  'accent-tertiatry': #d14a00,
 
   'danger': #fc5a5a,
   'warning': #a461d8,
@@ -27,6 +27,13 @@ $colors: (
   'into': #4e75ff,
   'transparante': transparante,
   'current': currentColor,
+);
+
+$paddings: (
+  'sm': 4px,
+  'md': 8px,
+  'lg': 16px,
+  'xl': 20px,
 );
 
 $spacers: (

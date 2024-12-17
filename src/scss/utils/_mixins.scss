@@ -2,7 +2,7 @@
 @use 'sass:list';
 
 @use 'variables' as var;
-@use 'functions';
+@use 'functions' as fn;
 
 @mixin mq($bp: sm, $type: min, $is-retina: false) {
   @if map.has-key(var.$breakpoints, $bp) {
