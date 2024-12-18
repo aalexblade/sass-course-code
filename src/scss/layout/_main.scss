@@ -10,10 +10,11 @@
   grid-template-areas:
     'welcome'
     'co-workers'
+    'tasks'
     'reports';
 
   @include mx.mq('md') {
-    gap: 16px;
+    gap: 36px;
     padding: 36px;
 
     grid-template-columns: repeat(2, 1fr);
@@ -32,6 +33,6 @@
     grid-template-areas:
       'welcome welcome'
       'co-workers tasks'
-      'co-woekers reports';
+      'co-workers reports';
   }
 }

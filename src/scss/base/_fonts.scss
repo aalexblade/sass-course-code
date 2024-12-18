@@ -6,7 +6,7 @@ $fonts: var.$font-weights;
   @font-face {
     font-family: 'Montserrat';
     src: url('../../fonts/Montserrat-#{key}.woff2') format('wolff2'),
-      ('../../fonts/Montserrat-#{key}.woff') format('wolff');
+      url('../../fonts/Montserrat-#{key}.woff') format('wolff');
     font-weight: $value;
     font-style: normal;
     font-display: swap;
