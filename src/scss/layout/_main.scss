@@ -25,10 +25,10 @@
   }
 
   @include mx.mq('lg') {
-    //position in page layout
+    // Position in page layout
     grid-area: main;
 
-    //inside grid system
+    // Inside grid system
     grid-template-columns: repeat(auto-fit, minmax(455px, 629px));
     grid-template-areas:
       'welcome welcome'

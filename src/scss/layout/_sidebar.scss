@@ -4,7 +4,7 @@
 @use '../utils/mixins' as mx;
 
 .sidebar {
-  @include mx.mq('lg', 'mx') {
+  @include mx.mq('lg', 'max') {
     position: fixed;
     top: 0;
     left: 0;
@@ -20,7 +20,7 @@
 
     &.is-open {
       opacity: 1;
-      pointer-events: none;
+      pointer-events: initial;
       visibility: visible;
     }
   }
