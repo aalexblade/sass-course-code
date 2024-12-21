@@ -1,36 +1,22 @@
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: $btn-layer-spacing;
-  
-    min-width: $btn-layer-min-width;
-    min-height: $btn-layer-min-height;
-    padding: $btn-padding-y $btn-padding-x;
-  
-    color: $btn-text-color;
-    border-radius: $btn-layer-border-radius;
-  
-    transition-property: background-color, color, box-shadow;
-    transition-duration: 300ms;
-    transition-timing-function: ease;
-  
-    // Normalize for tag <button>
-    font: inherit;
-    text-transform: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    margin: 0;
-    overflow: visible;
-    cursor: pointer;
-  
-    .btn-inner {
-      font-size: $btn-text-size;
-      font-weight: $btn-text-weight;
-      line-height: calc($btn-line-height / $btn-text-size);
-      letter-spacing: #{calc($btn-text-spacing / $btn-text-size)}em;
+@if index($btn-types, primary) {
+  /* ==Primary == */
+  .btn--primary {
+    background-color: #f07f2e;
+
+    &:active {
+      background-color: #d14a00;
     }
-  
-    .btn-icon {
-      fill: currentColor;
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        background-color: #f15c27;
+        box-shadow: 0px 4px 10px 0px rgba(240, 127, 46, 0.25);
+      }
+    }
+
+    &[disabled] {
+      background-color: #b5b5be;
     }
   }
+}
